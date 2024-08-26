@@ -19,13 +19,13 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
-  
+
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/country" element={<CountryPage />} />
+        <Route path="/country/:name" element={<CountryPage />} />
       </Routes>
     </div>
   );

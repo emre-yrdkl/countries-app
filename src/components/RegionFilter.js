@@ -7,11 +7,11 @@ export default function RegionFilter({ setRegion }) {
       className=" p-4 rounded-md shadow-md border border-gray-300 dark:bg-gray-800 dark:text-white"
     >
       <option value="">Filter by Region</option>
-      <option value="Africa">Africa</option>
-      <option value="America">Americas</option>
-      <option value="Asia">Asia</option>
-      <option value="Europe">Europe</option>
-      <option value="Oceania">Oceania</option>
+      <option value="africa">Africa</option>
+      <option value="america">Americas</option>
+      <option value="asia">Asia</option>
+      <option value="europe">Europe</option>
+      <option value="oceania">Oceania</option>
     </select>
   );
 }
