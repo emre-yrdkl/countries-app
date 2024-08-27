@@ -8,6 +8,7 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  // add or remove the 'dark' class to the document element based on the darkMode state
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -21,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
+    <div className={darkMode ? 'dark-mode bg-slate-900' : 'light-mode'}>
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
       <Routes>
         <Route path="/" element={<HomePage />} />

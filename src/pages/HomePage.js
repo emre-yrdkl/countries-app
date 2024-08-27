@@ -15,6 +15,7 @@ export default function HomePage() {
         const fetchCountries = async () => {
             try {
                 let response;
+                // fetch countries based on the selected region, or fetch all countries if no region is selected
                 if (region) {
                     response = await axios.get(`https://restcountries.com/v3.1/region/${region}`);
                 } else {
@@ -28,7 +29,8 @@ export default function HomePage() {
         };
         fetchCountries();
     }, [region]);
-
+    
+    // filtering the countries based on the search query
     useEffect(() => {
         let filtered = countries;
 
@@ -47,7 +49,7 @@ export default function HomePage() {
                 <div>
                     <SearchBar setSearchQuery={setSearchQuery} />
                 </div>
-                <div className='mr-0 ml-auto'>
+                <div className='mt-6 sm:mt-0 sm:mr-0 sm:ml-auto'>
                     <RegionFilter setRegion={setRegion} />
                 </div>
             </div>
