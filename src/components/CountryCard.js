@@ -7,7 +7,7 @@ function CountryCard({ country }) {
       <div className="bg-white dark:bg-gray-800 rounded-md shadow-md overflow-hidden">
         <img src={country.flags.svg} alt={`${country.name.common} flag`} className="w-full h-40 object-cover" />
         <div className="p-4">
-          <p className="text-lg font-bold text-gray-900 dark:text-white">{country.name.common}</p>
+          <p className="text-lg font-bold text-gray-900 dark:text-white">{country.name.common}2</p>
           <p className="text-gray-700 dark:text-gray-300"><strong>Population:</strong> {country.population.toLocaleString()}</p>
           <p className="text-gray-700 dark:text-gray-300"><strong>Region:</strong> {country.region}</p>
           <p className="text-gray-700 dark:text-gray-300"><strong>Capital:</strong> {country.capital}</p>
